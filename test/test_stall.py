@@ -8,7 +8,7 @@ from common import env
 
 def test():
   signal.alarm(45)
-  with env(HOROVOD_STALL_CHECK_TIME_SECONDS="2", 
+  with env(HOROVOD_STALL_CHECK_TIME_SECONDS="2",
     HOROVOD_STALL_SHUTDOWN_TIME_SECONDS="5"):
     config = tf.ConfigProto()
     tf.enable_eager_execution(config=config)
